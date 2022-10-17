@@ -7,7 +7,6 @@ import { getTodoById, updateTodo } from '../../businessLogic/todosAcess'
 import { getUploadUrl } from '../../businessLogic/attachmentUtils'
 
 const bucketName = process.env.ATTACHMENT_S3_BUCKET;
-
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const todoId = event.pathParameters.todoId
