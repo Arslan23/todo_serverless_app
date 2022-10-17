@@ -14,8 +14,6 @@ const index = process.env.TODOS_CREATED_AT_INDEX
 
 
 export async function getAllToDoByUserId(userId: string): Promise<TodoItem[]> {
-  console.log('Getting all to do items')
-
   const params = {
     TableName: toDosTable,
     KeyConditionExpression: "#userId = :userId",
